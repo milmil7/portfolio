@@ -1,0 +1,185 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: all
+}
+@plugin "daisyui/theme" {
+    name: "neubrutal";
+    default: false; 
+    prefersdark: false;
+    color-scheme: light;
+    
+    --color-base-100: oklch(97% 0.03 95);   
+    --color-base-200: oklch(92% 0.06 95);   
+    --color-base-300: oklch(88% 0.07 95);   
+    --color-base-content: oklch(20% 0.05 95); 
+    
+    --color-primary: oklch(70% 0.25 40); 
+    --color-primary-content: oklch(98% 0.01 95);
+    
+    --color-secondary: oklch(65% 0.25 260); 
+    --color-secondary-content: oklch(98% 0.01 95);
+    
+    --color-accent: oklch(75% 0.25 150); 
+    --color-accent-content: oklch(98% 0.01 95);
+    
+    --color-neutral: oklch(35% 0.05 95); 
+    --color-neutral-content: oklch(98% 0.01 95);
+    
+    --color-info: oklch(70% 0.2 250);
+    --color-info-content: oklch(98% 0.01 95);
+    --color-success: oklch(75% 0.25 140);
+    --color-success-content: oklch(98% 0.01 95);
+    --color-warning: oklch(80% 0.25 90);
+    --color-warning-content: oklch(20% 0.05 90);
+    --color-error: oklch(65% 0.3 30);
+    --color-error-content: oklch(98% 0.01 95);
+    
+    --radius-selector: 0.1rem;
+    --radius-field: 0.1rem;
+    --radius-box: 0.15rem;
+    
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    
+    --border: 3px;
+    
+    --depth: 0;
+    --noise: 0;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+[data-design="neubrutal"] {
+    .btn,
+    .card,
+    .input,
+    .select,
+    .textarea {
+        border: 3px solid !important;
+        @apply shadow-[4px_4px_0px_black];
+        @apply shadow-base-content;
+        @apply border-base-content;
+    }
+
+    .badge {
+        border: 3px solid black !important;
+        @apply shadow-[4px_4px_0px_black];
+        @apply shadow-base-content;
+        @apply border-base-content;
+    }
+
+    .alert {
+        border: 4px solid black !important;
+        @apply shadow-[4px_4px_0px_black];
+        @apply shadow-base-content;
+        @apply border-base-content;
+        /*box-shadow: 4px 4px 0 black !important;*/
+    }
+}
+[data-design="material"] {
+    .btn,
+    .card,
+    .input,
+    .select,
+    .textarea {
+        background-color: white !important;
+        border: none !important;
+        border-radius: 8px !important;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12),
+        0px 4px 8px rgba(0, 0, 0, 0.08) !important;
+        transition: box-shadow 0.2s ease, transform 0.1s ease !important;
+    }
+
+    .btn:hover,
+    .card:hover {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16),
+        0px 8px 16px rgba(0, 0, 0, 0.12) !important;
+        transform: translateY(-1px);
+    }
+
+    .badge {
+        background-color: #6200ee !important; 
+        color: white !important;
+        border-radius: 12px !important;
+        padding: 0.25rem 0.75rem !important;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .alert {
+        border-radius: 4px !important;
+        padding: 1rem !important;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15) !important;
+        background-color: #fff8e1 !important; 
+    }
+}
+[data-design="flat"] {
+    .btn,
+    .card,
+    .input,
+    .select,
+    .textarea {
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        border-radius: 6px !important;
+        background-color: var(--color-base-100) !important;
+        box-shadow: none !important;
+        transition: background-color 0.2s ease !important;
+    }
+
+    .btn:hover,
+    .card:hover {
+        background-color: var(--color-base-200) !important;
+    }
+
+    .badge {
+        border-radius: 6px !important;
+        background-color: var(--color-primary) !important;
+        color: var(--color-primary-content) !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .alert {
+        border-radius: 6px !important;
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        box-shadow: none !important;
+        background-color: var(--color-warning) !important;
+        color: var(--color-warning-content) !important;
+    }
+}
+[data-design="morphism"] {
+    .btn,
+    .card,
+    .input,
+    .select,
+    .textarea {
+        border: none !important;
+        border-radius: 12px !important;
+        background-color: var(--color-base-100) !important;
+        box-shadow:
+                6px 6px 12px rgba(0, 0, 0, 0.15),
+                -6px -6px 12px rgba(255, 255, 255, 0.7) !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .btn:active,
+    .card:active {
+        box-shadow:
+                inset 4px 4px 8px rgba(0, 0, 0, 0.15),
+                inset -4px -4px 8px rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .badge {
+        border-radius: 12px !important;
+        background-color: var(--color-primary) !important;
+        color: var(--color-primary-content) !important;
+        box-shadow:
+                3px 3px 6px rgba(0, 0, 0, 0.15),
+                -3px -3px 6px rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .alert {
+        border-radius: 12px !important;
+        background-color: var(--color-base-200) !important;
+        box-shadow:
+                4px 4px 8px rgba(0, 0, 0, 0.15),
+                -4px -4px 8px rgba(255, 255, 255, 0.7) !important;
+    }
+}
